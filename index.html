@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AquaPulse is an intelligent aquarium companion that helps fishkeepers manage tank health, water quality, livestock and care routines with calm, practical guidance." />
+
+  <meta
+    name="description"
+    content="AquaPulse is an intelligent aquarium companion that helps fishkeepers manage tank health, water quality, livestock and care routines with calm, practical guidance."
+  />
+
   <title>AquaPulse | Aquarium Companion</title>
 
   <style>
     :root {
       --bg: #06131b;
-      --bg-soft: #0b2130;
-      --card: rgba(255, 255, 255, 0.055);
-      --card-strong: rgba(255, 255, 255, 0.085);
-      --line: rgba(255, 255, 255, 0.11);
-      --text: #f4fbff;
+      --card: rgba(255, 255, 255, 0.06);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #f5fbff;
       --muted: #a9bfce;
       --soft: #d8e8f2;
       --aqua: #4fd8ff;
       --teal: #25e6c8;
-      --warning: #ffd166;
-      --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
     }
 
     * {
@@ -28,11 +29,11 @@
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Inter, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 18% 5%, rgba(79, 216, 255, 0.18), transparent 34%),
-        radial-gradient(circle at 85% 15%, rgba(37, 230, 200, 0.13), transparent 32%),
+        radial-gradient(circle at 15% 5%, rgba(79,216,255,0.18), transparent 34%),
+        radial-gradient(circle at 85% 12%, rgba(37,230,200,0.12), transparent 30%),
         linear-gradient(180deg, #06131b 0%, #071822 48%, #041016 100%);
       min-height: 100vh;
     }
@@ -49,8 +50,8 @@
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 28px 0;
     }
 
@@ -58,9 +59,9 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 750;
-      letter-spacing: -0.03em;
       font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
     }
 
     .logo {
@@ -69,11 +70,8 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      background:
-        linear-gradient(145deg, rgba(79, 216, 255, 0.25), rgba(37, 230, 200, 0.12)),
-        #071d2a;
-      border: 1px solid rgba(79, 216, 255, 0.32);
-      box-shadow: 0 0 28px rgba(79, 216, 255, 0.16);
+      background: linear-gradient(145deg, rgba(79,216,255,0.28), rgba(37,230,200,0.14)), #071d2a;
+      border: 1px solid rgba(79,216,255,0.32);
     }
 
     .logo svg {
@@ -94,23 +92,21 @@
 
     .hero {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 48px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 54px;
       align-items: center;
-      padding: 48px 0 56px;
+      padding: 48px 0 64px;
     }
 
     .eyebrow {
       display: inline-flex;
-      align-items: center;
-      gap: 8px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(79, 216, 255, 0.1);
-      border: 1px solid rgba(79, 216, 255, 0.18);
+      background: rgba(79,216,255,0.1);
+      border: 1px solid rgba(79,216,255,0.18);
       color: #bdefff;
       font-size: 13px;
-      font-weight: 650;
+      font-weight: 700;
       margin-bottom: 22px;
     }
 
@@ -121,12 +117,12 @@
       letter-spacing: -0.075em;
     }
 
-    .hero p {
+    .hero-copy {
       margin: 24px 0 0;
       font-size: 20px;
       line-height: 1.65;
       color: var(--soft);
-      max-width: 660px;
+      max-width: 650px;
     }
 
     .actions {
@@ -143,7 +139,7 @@
       min-height: 48px;
       padding: 0 18px;
       border-radius: 16px;
-      font-weight: 720;
+      font-weight: 800;
       font-size: 15px;
       border: 1px solid transparent;
     }
@@ -151,121 +147,49 @@
     .button.primary {
       background: linear-gradient(135deg, var(--aqua), var(--teal));
       color: #031118;
-      box-shadow: 0 18px 42px rgba(79, 216, 255, 0.18);
+      box-shadow: 0 18px 42px rgba(79,216,255,0.18);
     }
 
     .button.secondary {
-      background: rgba(255, 255, 255, 0.055);
+      background: rgba(255,255,255,0.055);
       border-color: var(--line);
       color: var(--text);
     }
 
-    .phone-wrap {
+    .screenshot-wrap {
       display: flex;
       justify-content: center;
+      position: relative;
     }
 
-    .phone {
-      width: min(355px, 100%);
-      border-radius: 42px;
-      padding: 14px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04));
-      border: 1px solid rgba(255,255,255,0.16);
-      box-shadow: var(--shadow);
+    .screenshot-wrap::before {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      border-radius: 999px;
+      background: rgba(79,216,255,0.15);
+      filter: blur(60px);
+      top: 16%;
+      z-index: 0;
     }
 
-    .screen {
-      min-height: 650px;
-      border-radius: 32px;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(79,216,255,0.24), transparent 35%),
-        linear-gradient(180deg, #092031, #06131b);
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 22px;
-    }
-
-    .status-bar {
-      height: 18px;
-      display: flex;
-      justify-content: space-between;
-      color: rgba(255,255,255,0.72);
-      font-size: 11px;
-      margin-bottom: 26px;
-    }
-
-    .app-title {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .tank-title {
-      font-size: 28px;
-      font-weight: 780;
-      letter-spacing: -0.04em;
-      margin-bottom: 18px;
-    }
-
-    .health-card {
-      background: rgba(255,255,255,0.075);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 24px;
-      padding: 20px;
-      margin-bottom: 14px;
-    }
-
-    .pulse {
-      width: 58px;
-      height: 58px;
-      border-radius: 20px;
-      background: rgba(37, 230, 200, 0.12);
-      border: 1px solid rgba(37, 230, 200, 0.24);
-      display: grid;
-      place-items: center;
-      margin-bottom: 14px;
-    }
-
-    .health-card h3 {
-      margin: 0 0 8px;
-      font-size: 20px;
-      letter-spacing: -0.03em;
-    }
-
-    .health-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    .metric-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .metric {
-      background: rgba(255,255,255,0.055);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 14px;
-    }
-
-    .metric span {
+    .app-screenshot {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 360px;
+      border-radius: 34px;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow:
+        0 30px 90px rgba(0,0,0,0.48),
+        0 0 70px rgba(79,216,255,0.14);
       display: block;
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 6px;
-    }
-
-    .metric strong {
-      font-size: 18px;
+      background: white;
     }
 
     section {
-      padding: 38px 0;
+      padding: 42px 0;
     }
 
     .section-heading {
@@ -301,7 +225,7 @@
       box-shadow: 0 16px 40px rgba(0,0,0,0.16);
     }
 
-    .card .icon {
+    .icon {
       width: 44px;
       height: 44px;
       border-radius: 15px;
@@ -340,6 +264,12 @@
       padding: 30px;
     }
 
+    .panel p {
+      color: var(--soft);
+      line-height: 1.7;
+      margin: 0;
+    }
+
     .panel ul {
       margin: 18px 0 0;
       padding: 0;
@@ -365,8 +295,8 @@
       margin-top: 24px;
       padding: 18px 20px;
       border-radius: 20px;
-      background: rgba(255, 209, 102, 0.08);
-      border: 1px solid rgba(255, 209, 102, 0.18);
+      background: rgba(255,209,102,0.08);
+      border: 1px solid rgba(255,209,102,0.18);
       color: #ffe3a3;
       line-height: 1.6;
       font-size: 14px;
@@ -404,15 +334,16 @@
       }
 
       .hero {
-        padding-top: 30px;
+        padding-top: 28px;
       }
 
-      .phone-wrap {
+      .screenshot-wrap {
         order: -1;
       }
 
-      .screen {
-        min-height: 560px;
+      .app-screenshot {
+        max-width: 310px;
+        border-radius: 30px;
       }
 
       .cards {
@@ -452,67 +383,64 @@
       <section class="hero">
         <div>
           <div class="eyebrow">Calm, intelligent aquarium support</div>
+
           <h1>Feel more confident caring for your aquarium.</h1>
-          <p>
+
+          <p class="hero-copy">
             AquaPulse helps fishkeepers understand water quality, tank health, livestock needs and care routines with clear guidance designed to reduce uncertainty.
           </p>
+
           <div class="actions">
-            <a class="button primary" href="mailto:valeonlabs@proton.me">Contact support</a>
-            <a class="button secondary" href="privacy.html">View privacy policy</a>
+            <a class="button primary" href="mailto:valeonlabs@proton.me">
+              Contact support
+            </a>
+
+            <a class="button secondary" href="privacy.html">
+              View privacy policy
+            </a>
           </div>
         </div>
 
-        <div class="phone-wrap" aria-label="AquaPulse app preview">
-          <div class="phone">
-            <div class="screen">
-              <div class="status-bar"><span>20:40</span><span>76%</span></div>
-              <div class="app-title">AquaPulse</div>
-              <div class="tank-title">Shrimp Tank</div>
-
-              <div class="health-card">
-                <div class="pulse">
-                  <svg width="34" height="34" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 39H20L27 24L37 48L43 35H56" stroke="#25e6c8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <h3>Tank looks stable</h3>
-                <p>Your recent readings suggest a calm system. Keep monitoring trends and avoid sudden changes.</p>
-              </div>
-
-              <div class="metric-grid">
-                <div class="metric"><span>Ammonia</span><strong>0 ppm</strong></div>
-                <div class="metric"><span>Nitrite</span><strong>0 ppm</strong></div>
-                <div class="metric"><span>Nitrate</span><strong>12 ppm</strong></div>
-                <div class="metric"><span>Next action</span><strong>Test soon</strong></div>
-              </div>
-            </div>
-          </div>
+        <div class="screenshot-wrap" aria-label="AquaPulse app screenshot">
+          <img
+            src="screenshot-main.jpg"
+            alt="Screenshot of AquaPulse showing a cycling freshwater tank with water parameter guidance"
+            class="app-screenshot"
+          />
         </div>
       </section>
 
       <section id="features">
         <div class="section-heading">
           <h2>Built for real fishkeeping decisions.</h2>
-          <p>AquaPulse is designed around the moments where aquarium keeping can feel uncertain: changing water parameters, livestock compatibility, maintenance routines and early warning signs.</p>
+          <p>
+            AquaPulse is designed around the moments where aquarium keeping can feel uncertain: changing water parameters, livestock compatibility, maintenance routines and early warning signs.
+          </p>
         </div>
 
         <div class="cards">
           <article class="card">
             <div class="icon">1</div>
             <h3>Track tank health</h3>
-            <p>Log water readings, monitor changes over time and understand what your parameters may mean for your specific aquarium.</p>
+            <p>
+              Log water readings, monitor changes over time and understand what your parameters may mean for your specific aquarium.
+            </p>
           </article>
 
           <article class="card">
             <div class="icon">2</div>
             <h3>Understand livestock needs</h3>
-            <p>Keep tank, fish, shrimp, plant and compatibility context together so guidance feels relevant to the ecosystem you actually keep.</p>
+            <p>
+              Keep tank, fish, shrimp, plants and compatibility context together so guidance feels relevant to the ecosystem you actually keep.
+            </p>
           </article>
 
           <article class="card">
             <div class="icon">3</div>
             <h3>Get calmer guidance</h3>
-            <p>Receive practical next steps without alarmist language, helping you respond thoughtfully rather than panic.</p>
+            <p>
+              Receive practical next steps without alarmist language, helping you respond thoughtfully rather than panic.
+            </p>
           </article>
         </div>
       </section>
@@ -532,9 +460,10 @@
 
           <div class="panel">
             <h2>Designed to reduce uncertainty</h2>
-            <p class="body-copy">
+            <p>
               AquaPulse is not just a logbook. It is being built as an aquarium companion that gives fishkeepers more confidence when something changes in the tank.
             </p>
+
             <div class="notice">
               AquaPulse provides informational guidance only. It is not a veterinary service and should not replace expert advice for serious livestock health issues.
             </div>
@@ -545,6 +474,7 @@
 
     <footer>
       <div>© 2026 AquaPulse. All rights reserved.</div>
+
       <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a>
