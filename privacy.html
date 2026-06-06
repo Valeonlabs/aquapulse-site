@@ -63,13 +63,20 @@
       font-size: 22px;
     }
 
+    .brand small {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0;
+      margin-top: 2px;
+    }
+
     .logo {
       width: 48px;
       height: 48px;
       border-radius: 14px;
       overflow: hidden;
-      background: transparent;
-      border: none;
       flex-shrink: 0;
       box-shadow: 0 12px 34px rgba(79, 216, 255, 0.18);
     }
@@ -132,6 +139,15 @@
       color: var(--soft);
     }
 
+    .company-box {
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid var(--line);
+      color: var(--soft);
+    }
+
     footer {
       margin-top: 28px;
       color: var(--muted);
@@ -140,6 +156,7 @@
       justify-content: space-between;
       gap: 18px;
       flex-wrap: wrap;
+      line-height: 1.7;
     }
   </style>
 </head>
@@ -151,116 +168,214 @@
         <span class="logo" aria-hidden="true">
           <img src="favicon.png" alt="" />
         </span>
-        <span>AquaPulse</span>
+        <span>
+          AquaPulse
+          <small>by Valeon Labs Ltd</small>
+        </span>
       </a>
       <a class="back-link" href="index.html">Back to homepage</a>
     </header>
 
     <main class="card">
       <h1>Privacy Policy</h1>
-      <div class="updated">Last updated: 25 May 2026</div>
+      <div class="updated">Last updated: 6 June 2026</div>
 
       <p>
-        This Privacy Policy explains how AquaPulse collects, uses and protects information when you use the AquaPulse mobile app and related website.
+        This Privacy Policy explains how AquaPulse collects, uses, stores and protects information when you use the AquaPulse mobile app, website and related services.
       </p>
 
       <div class="notice">
-        AquaPulse is an aquarium care and guidance app. It provides informational guidance only and is not a veterinary, medical or professional livestock health service.
+        AquaPulse is an aquarium care and guidance app. It provides informational guidance only and is not a veterinary, medical, diagnostic or professional livestock health service.
       </div>
 
       <h2>1. Who we are</h2>
       <p>
-        AquaPulse is operated by Valeon Labs. For privacy or support questions, contact us at <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a>.
+        AquaPulse is developed and operated by Valeon Labs Ltd, a company registered in England and Wales.
       </p>
 
+      <div class="company-box">
+        <strong>Valeon Labs Ltd</strong><br />
+        Company Registration Number: 17258810<br /><br />
+
+        <strong>Registered Office</strong><br />
+        71-75 Shelton Street<br />
+        Covent Garden<br />
+        London<br />
+        WC2H 9JQ<br />
+        United Kingdom<br /><br />
+
+        <strong>Contact</strong><br />
+        <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a>
+      </div>
+
       <h2>2. Information we collect</h2>
-      <p>Depending on how you use AquaPulse, we may collect the following types of information:</p>
+      <p>
+        Depending on how you use AquaPulse, we may collect and process the following categories of information:
+      </p>
       <ul>
-        <li>Account information, such as email address or sign-in provider details.</li>
-        <li>Aquarium information, such as tank names, tank type, size, livestock, plants, equipment and setup details.</li>
-        <li>Water parameter logs, maintenance records, reminders and aquarium care history.</li>
-        <li>App activity information, such as feature usage, app interactions and diagnostic events.</li>
-        <li>Device or technical information, such as device identifiers, crash logs, operating system, app version and security/app integrity signals.</li>
-        <li>Purchase and subscription status, where relevant, processed through Google Play and RevenueCat.</li>
-        <li>Photos or image uploads, if you choose to use image-based features in the app.</li>
+        <li><strong>Account information:</strong> such as your email address, authentication provider and account identifier.</li>
+        <li><strong>Aquarium information:</strong> such as tank names, tank type, tank size, setup details, livestock, plants, corals, equipment and care preferences.</li>
+        <li><strong>Water parameter and care data:</strong> such as water test results, maintenance records, reminders, tank history and aquarium notes.</li>
+        <li><strong>Photos and uploaded content:</strong> if you choose to upload images for aquarium guidance, tank records or image-based features.</li>
+        <li><strong>App activity:</strong> such as features used, screens viewed, onboarding progress, paywall interactions and general app usage events.</li>
+        <li><strong>Device and technical data:</strong> such as app version, operating system, device type, crash logs, diagnostics, security signals and app integrity information.</li>
+        <li><strong>Purchase information:</strong> such as subscription status, entitlement status and purchase-related identifiers processed through Google Play and RevenueCat.</li>
+        <li><strong>Support communications:</strong> such as messages you send to us by email or through support channels.</li>
       </ul>
 
       <h2>3. How we use information</h2>
-      <p>We use information to:</p>
+      <p>
+        We use information to:
+      </p>
       <ul>
-        <li>Provide aquarium tracking, tank management and guidance features.</li>
-        <li>Generate AI-assisted aquarium care explanations and insights.</li>
-        <li>Save your tanks, logs, reminders and account preferences.</li>
-        <li>Manage free and premium feature access.</li>
-        <li>Improve app reliability, security and user experience.</li>
-        <li>Respond to support requests.</li>
-        <li>Comply with legal, security and platform requirements.</li>
+        <li>Provide aquarium tracking, tank management and care guidance features.</li>
+        <li>Save your tanks, livestock, logs, reminders and account preferences.</li>
+        <li>Generate AI-assisted aquarium explanations, insights and recommendations.</li>
+        <li>Operate free and premium features, including subscription entitlement checks.</li>
+        <li>Improve app reliability, security, functionality and user experience.</li>
+        <li>Understand app usage and diagnose technical issues.</li>
+        <li>Respond to support, privacy and data deletion requests.</li>
+        <li>Prevent abuse, fraud, unauthorised access and misuse of the app.</li>
+        <li>Comply with legal, regulatory, tax, accounting, security and platform obligations.</li>
       </ul>
 
-      <h2>4. AI-assisted features</h2>
+      <h2>4. Legal basis for processing</h2>
       <p>
-        AquaPulse may use cloud-based AI services to generate aquarium guidance based on information you provide, such as tank details, water readings, livestock information or questions you ask. Do not submit sensitive personal information in AI prompts or aquarium notes.
+        Where UK GDPR or similar privacy laws apply, we process personal data on one or more of the following legal bases:
+      </p>
+      <ul>
+        <li><strong>Contract:</strong> to provide the app, account, subscription and requested services.</li>
+        <li><strong>Legitimate interests:</strong> to maintain, secure, improve and troubleshoot AquaPulse.</li>
+        <li><strong>Consent:</strong> where required, such as for certain optional analytics, notifications or uploaded content features.</li>
+        <li><strong>Legal obligation:</strong> where we must retain or process information for legal, tax, accounting, compliance or regulatory reasons.</li>
+      </ul>
+
+      <h2>5. AI-assisted features</h2>
+      <p>
+        AquaPulse may use cloud-based AI services to generate aquarium guidance based on information you provide, such as tank details, water readings, livestock information, photos, notes or questions.
+      </p>
+      <p>
+        AI-generated guidance may be inaccurate, incomplete or unsuitable for your specific circumstances. You should use your own judgement and seek specialist aquatic or veterinary advice where appropriate. Do not submit sensitive personal information in AI prompts, aquarium notes or uploaded images.
       </p>
 
-      <h2>5. Third-party services</h2>
-      <p>AquaPulse may use trusted third-party services to operate the app, including:</p>
+      <h2>6. Photos and image uploads</h2>
+      <p>
+        If you choose to upload images, those images may be processed to provide app features such as tank records, aquarium guidance or image-assisted analysis. You should avoid uploading images that contain people, private documents, location details or other sensitive personal information.
+      </p>
+
+      <h2>7. Third-party services</h2>
+      <p>
+        AquaPulse uses trusted third-party services to operate the app. These may include:
+      </p>
       <ul>
-        <li>Firebase and Google Cloud services for authentication, database, cloud functions, storage, security and app infrastructure.</li>
-        <li>Google Play services for app distribution, billing and subscriptions.</li>
-        <li>RevenueCat for subscription entitlement management.</li>
-        <li>AI service providers used to process aquarium guidance requests.</li>
+        <li><strong>Firebase and Google Cloud:</strong> for authentication, database, storage, cloud functions, analytics, security and app infrastructure.</li>
+        <li><strong>Google Play:</strong> for app distribution, in-app purchases, subscriptions and platform services.</li>
+        <li><strong>RevenueCat:</strong> for subscription entitlement management and purchase status processing.</li>
+        <li><strong>AI service providers:</strong> for processing aquarium guidance requests and generating AI-assisted responses.</li>
       </ul>
       <p>
-        These services may process information as required to provide their functionality. We do not sell your personal information.
+        These providers may process information as necessary to provide their services. We do not sell your personal information.
       </p>
 
-      <h2>6. Data sharing</h2>
+      <h2>8. Analytics, diagnostics and crash data</h2>
       <p>
-        We do not sell personal data. We may share information only where necessary to operate the app, process subscriptions, provide cloud or AI features, comply with legal obligations, investigate abuse, or protect the security and integrity of AquaPulse.
+        We may collect app activity, diagnostics, crash logs and performance information to understand how AquaPulse is used, identify errors, improve features and maintain app stability.
       </p>
-
-      <h2>7. Data storage and security</h2>
       <p>
-        We use reasonable technical and organisational measures to protect your information. Data transmitted between the app and cloud services is encrypted in transit. No method of electronic storage or transmission is completely secure, so we cannot guarantee absolute security.
+        Where possible, analytics are used in an aggregated or pseudonymous form. Analytics and diagnostics are not used to sell your personal information.
       </p>
 
-      <h2>8. Account deletion and data deletion</h2>
+      <h2>9. Subscriptions and payments</h2>
       <p>
-        You may request deletion of your account and associated data by contacting <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a>. Some information may be retained where required for legal, security, fraud-prevention, billing or compliance reasons.
+        Payments and subscriptions are processed by Google Play. AquaPulse does not directly collect or store your full payment card details. We may receive purchase status, entitlement information, transaction identifiers and related subscription information from Google Play and RevenueCat so we can manage premium access.
       </p>
 
-      <h2>9. Children’s privacy</h2>
+      <h2>10. Data sharing</h2>
       <p>
-        AquaPulse is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information, contact us and we will take appropriate steps to delete it.
+        We do not sell personal data. We may share information only where necessary to:
       </p>
+      <ul>
+        <li>Operate AquaPulse and provide requested app features.</li>
+        <li>Process subscriptions and manage premium access.</li>
+        <li>Provide cloud, storage, analytics, diagnostics, security or AI-assisted functionality.</li>
+        <li>Respond to support, privacy or legal requests.</li>
+        <li>Investigate misuse, fraud, technical problems or security incidents.</li>
+        <li>Comply with applicable laws, regulations, court orders or platform requirements.</li>
+      </ul>
 
-      <h2>10. Your choices</h2>
+      <h2>11. Data storage and security</h2>
       <p>
-        You may choose not to provide certain information, but some app features may not work without it. You can also uninstall the app at any time to stop further app-based data collection.
+        We use reasonable technical and organisational measures to protect your information. Data transmitted between the app and cloud services is encrypted in transit. Access to production systems is limited where appropriate.
       </p>
-
-      <h2>11. International processing</h2>
       <p>
-        Information may be processed in countries other than your own, depending on where our service providers operate. Where required, appropriate safeguards are used for international data processing.
+        No method of electronic storage or transmission is completely secure, so we cannot guarantee absolute security.
       </p>
 
-      <h2>12. Changes to this policy</h2>
+      <h2>12. Data retention</h2>
+      <p>
+        We keep personal information only for as long as reasonably necessary for the purposes described in this Privacy Policy, including providing the app, maintaining records, resolving disputes, enforcing terms, meeting legal obligations, preventing abuse and supporting security.
+      </p>
+      <p>
+        Some information may remain in backups or logs for a limited period before deletion as part of normal technical operations.
+      </p>
+
+      <h2>13. Account deletion and data deletion</h2>
+      <p>
+        You may request deletion of your account and associated personal data by contacting <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a>.
+      </p>
+      <p>
+        When requesting deletion, please contact us from the email address linked to your AquaPulse account where possible. Some information may be retained where required for legal, tax, accounting, billing, fraud-prevention, dispute resolution, security or compliance reasons.
+      </p>
+
+      <h2>14. Your rights</h2>
+      <p>
+        Depending on where you live, you may have rights to access, correct, delete, restrict or object to the processing of your personal data, and to request a copy of certain personal data.
+      </p>
+      <p>
+        To exercise these rights, contact us at <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a>. We may need to verify your identity before completing certain requests.
+      </p>
+
+      <h2>15. Children’s privacy</h2>
+      <p>
+        AquaPulse is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information to AquaPulse, contact us and we will take appropriate steps to delete it.
+      </p>
+
+      <h2>16. International processing</h2>
+      <p>
+        Information may be processed in countries other than your own, including where our service providers operate. Where required, appropriate safeguards are used for international data transfers.
+      </p>
+
+      <h2>17. Your choices</h2>
+      <p>
+        You may choose not to provide certain information, but some app features may not work without it. You can disable notifications through your device settings and uninstall the app at any time to stop further app-based data collection.
+      </p>
+
+      <h2>18. Changes to this Privacy Policy</h2>
       <p>
         We may update this Privacy Policy from time to time. If we make material changes, we will update the “Last updated” date and may provide additional notice where appropriate.
       </p>
 
-      <h2>13. Contact</h2>
+      <h2>19. Contact</h2>
       <p>
-        For privacy questions, support requests or data deletion requests, contact: <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a>.
+        For privacy questions, support requests, account deletion requests or data protection enquiries, contact:
+      </p>
+      <p>
+        <strong>Valeon Labs Ltd</strong><br />
+        Email: <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a><br />
+        Company Registration Number: 17258810<br />
+        Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom.
       </p>
     </main>
 
     <footer>
-      <span>© 2026 AquaPulse. All rights reserved.</span>
-      <span><a href="index.html">Homepage</a></span>
+      <span>
+        © 2026 Valeon Labs Ltd. All rights reserved.
+      </span>
+      <span>
+        <a href="index.html">Homepage</a>
+      </span>
     </footer>
   </div>
 </body>
 </html>
-```
 
