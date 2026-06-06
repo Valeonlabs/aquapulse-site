@@ -7,10 +7,10 @@
 
   <meta
     name="description"
-    content="AquaPulse is an intelligent aquarium companion that helps fishkeepers manage tank health, water quality, livestock and care routines with calm, practical guidance."
+    content="AquaPulse is an intelligent aquarium care app developed by Valeon Labs Ltd, helping fishkeepers track water quality, manage tank health, plan livestock and receive calm AI-assisted aquarium guidance."
   />
 
-  <title>AquaPulse | Aquarium Companion</title>
+  <title>AquaPulse | Intelligent Aquarium Care</title>
 
   <style>
     :root {
@@ -22,10 +22,15 @@
       --soft: #d8e8f2;
       --aqua: #4fd8ff;
       --teal: #25e6c8;
+      --amber: #ffd166;
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -65,13 +70,20 @@
       letter-spacing: -0.03em;
     }
 
+    .brand small {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0;
+      margin-top: 2px;
+    }
+
     .logo {
       width: 48px;
       height: 48px;
       border-radius: 14px;
       overflow: hidden;
-      background: transparent;
-      border: none;
       flex-shrink: 0;
       box-shadow: 0 12px 34px rgba(79, 216, 255, 0.18);
     }
@@ -198,7 +210,7 @@
     }
 
     .section-heading {
-      max-width: 760px;
+      max-width: 780px;
       margin-bottom: 24px;
     }
 
@@ -218,7 +230,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
 
@@ -304,15 +316,31 @@
       font-size: 14px;
     }
 
+    .company-box {
+      margin-top: 22px;
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.045);
+      color: var(--soft);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .company-box strong {
+      color: var(--text);
+    }
+
     footer {
       padding: 42px 0 60px;
       color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 24px;
       border-top: 1px solid var(--line);
       margin-top: 36px;
       font-size: 14px;
+      line-height: 1.7;
     }
 
     footer a {
@@ -323,6 +351,14 @@
       display: flex;
       gap: 18px;
       flex-wrap: wrap;
+      justify-content: flex-end;
+      align-content: start;
+    }
+
+    @media (max-width: 980px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 880px) {
@@ -331,7 +367,8 @@
       }
 
       .hero,
-      .split {
+      .split,
+      footer {
         grid-template-columns: 1fr;
       }
 
@@ -352,8 +389,8 @@
         grid-template-columns: 1fr;
       }
 
-      footer {
-        flex-direction: column;
+      .footer-links {
+        justify-content: flex-start;
       }
     }
   </style>
@@ -366,12 +403,16 @@
         <span class="logo" aria-hidden="true">
           <img src="favicon.png" alt="" />
         </span>
-        <span>AquaPulse</span>
+        <span>
+          AquaPulse
+          <small>by Valeon Labs Ltd</small>
+        </span>
       </a>
 
       <nav aria-label="Main navigation">
         <a href="#features">Features</a>
         <a href="#guidance">Guidance</a>
+        <a href="#about">About</a>
         <a href="privacy.html">Privacy</a>
         <a href="mailto:valeonlabs@proton.me">Support</a>
       </nav>
@@ -380,12 +421,16 @@
     <main>
       <section class="hero">
         <div>
-          <div class="eyebrow">Calm, intelligent aquarium support</div>
+          <div class="eyebrow">Intelligent aquarium care</div>
 
           <h1>Feel more confident caring for your aquarium.</h1>
 
           <p class="hero-copy">
-            AquaPulse helps fishkeepers understand water quality, tank health, livestock needs and care routines with clear guidance designed to reduce uncertainty.
+            AquaPulse helps fishkeepers build healthier, more stable aquariums through intelligent guidance, water quality tracking, livestock planning and AI-assisted insights.
+          </p>
+
+          <p class="hero-copy">
+            Whether you're cycling your first freshwater tank, managing a planted aquascape, breeding shrimp or maintaining a reef ecosystem, AquaPulse helps reduce uncertainty and gives you practical support when it matters most.
           </p>
 
           <div class="actions">
@@ -402,7 +447,7 @@
         <div class="screenshot-wrap" aria-label="AquaPulse app screenshot">
           <img
             src="screenshot-main.jpg"
-            alt="Screenshot of AquaPulse showing a cycling freshwater tank with water parameter guidance"
+            alt="Screenshot of AquaPulse showing aquarium water parameter guidance"
             class="app-screenshot"
           />
         </div>
@@ -412,29 +457,37 @@
         <div class="section-heading">
           <h2>Built for real fishkeeping decisions.</h2>
           <p>
-            AquaPulse is designed around the moments where aquarium keeping can feel uncertain: changing water parameters, livestock compatibility, maintenance routines and early warning signs.
+            Aquarium keeping can be rewarding, but it can also feel uncertain. Water parameters fluctuate, livestock compatibility can be confusing and online advice is often contradictory. AquaPulse brings your aquarium information together so guidance feels clearer and more relevant.
           </p>
         </div>
 
         <div class="cards">
           <article class="card">
             <div class="icon">1</div>
-            <h3>Track tank health</h3>
+            <h3>Monitor tank health</h3>
             <p>
-              Log water readings, monitor changes over time and understand what your parameters may mean for your specific aquarium.
+              Track water readings, monitor changes over time and understand what your parameters may mean for your aquarium ecosystem.
             </p>
           </article>
 
           <article class="card">
             <div class="icon">2</div>
-            <h3>Understand livestock needs</h3>
+            <h3>Plan with confidence</h3>
             <p>
-              Keep tank, fish, shrimp, plants and compatibility context together so guidance feels relevant to the ecosystem you actually keep.
+              Build freshwater, planted, shrimp and reef aquariums with intelligent stocking and compatibility guidance.
             </p>
           </article>
 
           <article class="card">
             <div class="icon">3</div>
+            <h3>Understand livestock</h3>
+            <p>
+              Keep fish, shrimp, plants, corals and tank context together so guidance reflects the ecosystem you actually keep.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">4</div>
             <h3>Get calmer guidance</h3>
             <p>
               Receive practical next steps without alarmist language, helping you respond thoughtfully rather than panic.
@@ -449,21 +502,61 @@
             <h2>What AquaPulse helps with</h2>
             <ul>
               <li>Water quality logging and interpretation</li>
-              <li>Tank setup and lifecycle guidance</li>
+              <li>Freshwater, planted, shrimp and reef aquariums</li>
+              <li>Tank cycling guidance</li>
               <li>Livestock and ecosystem planning</li>
               <li>Maintenance reminders and routine support</li>
+              <li>Aquarium history and progress tracking</li>
               <li>AI-assisted aquarium care explanations</li>
+              <li>Long-term ecosystem management</li>
             </ul>
           </div>
 
           <div class="panel">
             <h2>Designed to reduce uncertainty</h2>
             <p>
-              AquaPulse is not just a logbook. It is being built as an aquarium companion that gives fishkeepers more confidence when something changes in the tank.
+              AquaPulse is not just a logbook. It is being built as an intelligent aquarium assistant that helps fishkeepers understand what is happening in their tank and make more confident care decisions.
             </p>
 
             <div class="notice">
-              AquaPulse provides informational guidance only. It is not a veterinary service and should not replace expert advice for serious livestock health issues.
+              AquaPulse provides informational guidance only. It is not a veterinary service and should not replace expert, aquatic health or professional specialist advice for serious livestock health issues.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="split">
+          <div class="panel">
+            <h2>Built by fishkeepers, for everyday hobbyists.</h2>
+            <p>
+              AquaPulse was created to solve a simple problem: most aquarium apps focus on recording data, while fishkeepers often need help understanding what that data means.
+            </p>
+            <br />
+            <p>
+              Our goal is to help aquarium keepers make better decisions, protect their livestock and enjoy the hobby with greater confidence.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h2>Company information</h2>
+            <p>
+              AquaPulse is developed and operated by Valeon Labs Ltd, a company registered in England and Wales.
+            </p>
+
+            <div class="company-box">
+              <strong>Valeon Labs Ltd</strong><br />
+              Company Registration Number: 17258810<br /><br />
+
+              <strong>Registered Office</strong><br />
+              71-75 Shelton Street<br />
+              Covent Garden<br />
+              London<br />
+              WC2H 9JQ<br />
+              United Kingdom<br /><br />
+
+              <strong>Contact</strong><br />
+              <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a>
             </div>
           </div>
         </div>
@@ -471,15 +564,19 @@
     </main>
 
     <footer>
-      <div>© 2026 AquaPulse. All rights reserved.</div>
+      <div>
+        <strong>AquaPulse</strong><br />
+        Developed and operated by Valeon Labs Ltd.<br />
+        Company Registration Number: 17258810<br />
+        Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom.<br />
+        © 2026 Valeon Labs Ltd. All rights reserved.
+      </div>
 
       <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a>
-        <a href="mailto:valeonlabs@proton.me">valeonlabs@proton.me</a>
+        <a href="mailto:valeonlabs@proton.me">Support</a>
       </div>
     </footer>
   </div>
 </body>
 </html>
-```
-
