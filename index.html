@@ -7,10 +7,33 @@
 
   <meta
     name="description"
-    content="AquaPulse is an intelligent aquarium care app developed by Valeon Labs Ltd, helping fishkeepers track water quality, manage tank health, plan livestock and receive calm AI-assisted aquarium guidance."
+    content="AquaPulse is an aquarium app for fishkeepers. Track water parameters, manage fish tanks, plan livestock and receive intelligent aquarium guidance."
   />
 
-  <title>AquaPulse | Intelligent Aquarium Care</title>
+  <title>AquaPulse Aquarium App | Fish Tank Tracking & Aquarium Care</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "AquaPulse",
+    "alternateName": "AquaPulse Aquarium App",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Android",
+    "description": "AquaPulse is an intelligent aquarium care app for fishkeepers, helping users track water parameters, manage fish tanks, plan livestock and receive calm aquarium guidance.",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.valeonlabs.aquapulse",
+    "url": "https://www.aquapulse.app",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Valeon Labs Ltd"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP"
+    }
+  }
+  </script>
 
   <style>
     :root {
@@ -171,6 +194,11 @@
       background: rgba(255,255,255,0.055);
       border-color: var(--line);
       color: var(--text);
+    }
+
+    .button svg {
+      margin-right: 8px;
+      flex-shrink: 0;
     }
 
     .screenshot-wrap {
@@ -433,38 +461,39 @@
             Whether you're cycling your first freshwater tank, managing a planted aquascape, breeding shrimp or maintaining a reef ecosystem, AquaPulse helps reduce uncertainty and gives you practical support when it matters most.
           </p>
 
-        <div class="actions">
-  <a
-    class="button primary"
-    href="https://play.google.com/store/apps/details?id=com.valeonlabs.aquapulse"
-    target="_blank"
-    rel="noopener"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      style="margin-right:8px;"
-    >
-      <path d="M3.609 1.814L13.792 12 3.61 22.186c-.39-.24-.61-.647-.61-1.13V2.944c0-.483.22-.89.609-1.13z"/>
-      <path d="M17.654 15.862L6.527 22.29l8.636-8.637 2.49 2.209z"/>
-      <path d="M17.653 8.138l-2.49 2.209-8.636-8.637 11.126 6.428z"/>
-      <path d="M21.482 10.698c.69.387.69 1.217 0 1.604l-2.847 1.596L16.03 12l2.605-1.898 2.847 1.596z"/>
-    </svg>
-    Download on Google Play
-  </a>
+          <div class="actions">
+            <a
+              class="button primary"
+              href="https://play.google.com/store/apps/details?id=com.valeonlabs.aquapulse"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M3.609 1.814L13.792 12 3.61 22.186c-.39-.24-.61-.647-.61-1.13V2.944c0-.483.22-.89.609-1.13z"/>
+                <path d="M17.654 15.862L6.527 22.29l8.636-8.637 2.49 2.209z"/>
+                <path d="M17.653 8.138l-2.49 2.209-8.636-8.637 11.126 6.428z"/>
+                <path d="M21.482 10.698c.69.387.69 1.217 0 1.604l-2.847 1.596L16.03 12l2.605-1.898 2.847 1.596z"/>
+              </svg>
+              Download on Google Play
+            </a>
 
-  <a class="button secondary" href="privacy.html">
-    Privacy Policy
-  </a>
-</div>
+            <a class="button secondary" href="privacy.html">
+              Privacy Policy
+            </a>
+          </div>
         </div>
+
         <div class="screenshot-wrap" aria-label="AquaPulse app screenshot">
           <img
             src="handsetinfrontofaquarium.jpg"
-            alt="AquaPulse displayed on a smartphone in front of an aquarium"
+            alt="AquaPulse aquarium app displayed on a smartphone in front of a fish tank"
             class="app-screenshot"
           />
         </div>
@@ -583,13 +612,16 @@
     <footer>
       <div>
         <strong>AquaPulse</strong><br />
-        Developed and operated by Valeon Labs Ltd.<br />
+        Aquarium app developed and operated by Valeon Labs Ltd.<br />
         Company Registration Number: 17258810<br />
         Registered Office: 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom.<br />
         © 2026 Valeon Labs Ltd. All rights reserved.
       </div>
 
       <div class="footer-links">
+        <a href="https://play.google.com/store/apps/details?id=com.valeonlabs.aquapulse" target="_blank" rel="noopener">
+          Download on Google Play
+        </a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="mailto:valeonlabs@proton.me">Support</a>
       </div>
