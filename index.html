@@ -256,6 +256,51 @@
       line-height: 1.65;
     }
 
+    .video-section {
+      padding-top: 24px;
+    }
+
+    .video-panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 28px;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.22);
+    }
+
+    .video-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .video-copy p {
+      color: var(--soft);
+      line-height: 1.7;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: #000;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -344,6 +389,28 @@
       font-size: 14px;
     }
 
+    .download-panel {
+      text-align: center;
+      padding: 40px 28px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(79,216,255,0.18), transparent 44%),
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid var(--line);
+    }
+
+    .download-panel p {
+      max-width: 680px;
+      margin: 12px auto 0;
+      color: var(--soft);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .download-panel .actions {
+      justify-content: center;
+    }
+
     .company-box {
       margin-top: 22px;
       padding: 20px;
@@ -387,6 +454,10 @@
       .cards {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .video-layout {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 880px) {
@@ -420,6 +491,10 @@
       .footer-links {
         justify-content: flex-start;
       }
+
+      .video-panel {
+        padding: 18px;
+      }
     }
   </style>
 </head>
@@ -439,6 +514,7 @@
 
       <nav aria-label="Main navigation">
         <a href="#features">Features</a>
+        <a href="#video">Video</a>
         <a href="#guidance">Guidance</a>
         <a href="#about">About</a>
         <a href="privacy.html">Privacy</a>
@@ -468,14 +544,7 @@
               target="_blank"
               rel="noopener"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M3.609 1.814L13.792 12 3.61 22.186c-.39-.24-.61-.647-.61-1.13V2.944c0-.483.22-.89.609-1.13z"/>
                 <path d="M17.654 15.862L6.527 22.29l8.636-8.637 2.49 2.209z"/>
                 <path d="M17.653 8.138l-2.49 2.209-8.636-8.637 11.126 6.428z"/>
@@ -484,8 +553,8 @@
               Download on Google Play
             </a>
 
-            <a class="button secondary" href="privacy.html">
-              Privacy Policy
+            <a class="button secondary" href="#video">
+              Watch the video
             </a>
           </div>
         </div>
@@ -496,6 +565,47 @@
             alt="AquaPulse aquarium app displayed on a smartphone in front of a fish tank"
             class="app-screenshot"
           />
+        </div>
+      </section>
+
+      <section id="video" class="video-section">
+        <div class="video-panel">
+          <div class="video-layout">
+            <div class="video-copy">
+              <div class="eyebrow">See AquaPulse in action</div>
+              <h2>Understand your aquarium, not just your numbers.</h2>
+              <p>
+                Watch how AquaPulse helps fishkeepers track water quality, understand tank health and make calmer, more confident aquarium care decisions.
+              </p>
+
+              <div class="actions">
+                <a
+                  class="button primary"
+                  href="https://play.google.com/store/apps/details?id=com.valeonlabs.aquapulse"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3.609 1.814L13.792 12 3.61 22.186c-.39-.24-.61-.647-.61-1.13V2.944c0-.483.22-.89.609-1.13z"/>
+                    <path d="M17.654 15.862L6.527 22.29l8.636-8.637 2.49 2.209z"/>
+                    <path d="M17.653 8.138l-2.49 2.209-8.636-8.637 11.126 6.428z"/>
+                    <path d="M21.482 10.698c.69.387.69 1.217 0 1.604l-2.847 1.596L16.03 12l2.605-1.898 2.847 1.596z"/>
+                  </svg>
+                  Download on Google Play
+                </a>
+              </div>
+            </div>
+
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/YVCfgOg8ibA"
+                title="AquaPulse aquarium app video"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -567,6 +677,32 @@
             <div class="notice">
               AquaPulse provides informational guidance only. It is not a veterinary service and should not replace expert, aquatic health or professional specialist advice for serious livestock health issues.
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="download-panel">
+          <h2>Start caring for your aquarium with more confidence.</h2>
+          <p>
+            Download AquaPulse on Google Play and start tracking water quality, planning livestock and understanding your aquarium more clearly.
+          </p>
+
+          <div class="actions">
+            <a
+              class="button primary"
+              href="https://play.google.com/store/apps/details?id=com.valeonlabs.aquapulse"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186c-.39-.24-.61-.647-.61-1.13V2.944c0-.483.22-.89.609-1.13z"/>
+                <path d="M17.654 15.862L6.527 22.29l8.636-8.637 2.49 2.209z"/>
+                <path d="M17.653 8.138l-2.49 2.209-8.636-8.637 11.126 6.428z"/>
+                <path d="M21.482 10.698c.69.387.69 1.217 0 1.604l-2.847 1.596L16.03 12l2.605-1.898 2.847 1.596z"/>
+              </svg>
+              Download on Google Play
+            </a>
           </div>
         </div>
       </section>
